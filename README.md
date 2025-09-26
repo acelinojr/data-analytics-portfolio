@@ -116,3 +116,8 @@ Tabela: asset_controls
 Regras automáticas: bloqueio se %valid < 98 ou pct_zero > 0.
 
 Atualizada via evento SQL agendado (ainda decidindo a melhor forma).
+
+Top 5 ativos por maior volatilidade (desvio padrão do preço nos últimos 30 dias)
+
+<img width="403" height="125" alt="image" src="https://github.com/user-attachments/assets/f5d5e882-6b7c-4248-aa02-2e9b4c3e78a2" />
+
