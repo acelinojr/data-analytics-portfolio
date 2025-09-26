@@ -123,3 +123,13 @@ Atualizada via evento SQL agendado (ainda decidindo a melhor forma).
 
 <img width="403" height="125" alt="image" src="https://github.com/user-attachments/assets/f5d5e882-6b7c-4248-aa02-2e9b4c3e78a2" />
 
+## Automações para agregações periódicas dos dados
+
+Problema: Error Code: 1267 (Illegal mix of collations)
+
+Esse erro ocorre quando o MySQL tenta comparar ou juntar (JOIN/WHERE/ON), colunas VARCHAR (ou outras colunas de texto) que têm collations diferentes (por exemplo, utf8mb4_0900_ai_ci vs utf8mb4_unicode_ci). O servidor não consegue escolher automaticamente uma regra de comparação.
+
+Solução: sempre especificar ```CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci``` em ```CREATE TABLE``` para evitar divergências. Atualizei o código de criação das procedures para forçar o COLLATE.
+
+
+
