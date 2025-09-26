@@ -69,3 +69,50 @@ CREATE TABLE IF NOT EXISTS fact_market_hourly_stg (
 
 <img width="286" height="186" alt="image" src="https://github.com/user-attachments/assets/ead5c0c3-2a75-481e-92f3-04cac4bdd7d3" />
 
+Transformações feitas na fact_stg:
+
+Agrupamento por símbolo/hora.
+
+Cálculo de avg_price, avg_change_24h_percent, total_volume.
+
+Enriquecimento com hour_id via dim_time_hourly.
+
+
+Warehouse Layer (Star Schema)
+
+Fato: fact_market_hourly
+
+PK: (hour_id, asset_symbol)
+
+Métricas: preço médio, variação 24h, volume.
+
+Dimensões:
+
+dim_time_hourly (tempo)
+
+dim_asset (ativos)
+
+
+Métricas de Qualidade
+
+View: vw_risk_score
+
+Indicadores por símbolo:
+
+% válidos
+
+% preços zerados
+
+Volatilidade (stddev preço)
+
+Freshness (último timestamp)
+
+Ranking de risco agregado (exemplo: BTC, BNB, ETH, LTC, AVAX).
+
+Controle de Risco Automático
+
+Tabela: asset_controls
+
+Regras automáticas: bloqueio se %valid < 98 ou pct_zero > 0.
+
+Atualizada via SQL incremental.
