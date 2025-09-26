@@ -66,3 +66,6 @@ CREATE TABLE IF NOT EXISTS fact_market_hourly_stg (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 </details>
+
+<img width="286" height="186" alt="image" src="https://github.com/user-attachments/assets/ead5c0c3-2a75-481e-92f3-04cac4bdd7d3" />
+
