@@ -44,3 +44,25 @@ BEGIN
 END
 ```
 </details>
+
+
+Criação da tabela de staging: fact_market_hourly_stg
+
+<details>
+
+  ```
+CREATE TABLE IF NOT EXISTS fact_market_hourly_stg (
+  hour_ts DATETIME NOT NULL,
+  hour_id BIGINT DEFAULT NULL,
+  asset_symbol VARCHAR(64) NOT NULL,
+  cnt_obs INT,
+  avg_price DECIMAL(30,10),
+  avg_change_24h_percent DOUBLE,
+  total_volume DOUBLE,
+  price_stddev DOUBLE,
+  pct_valid DECIMAL(6,4),
+  ingest_ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (hour_ts, asset_symbol)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
+</details>
