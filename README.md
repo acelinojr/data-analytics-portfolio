@@ -1,5 +1,81 @@
 OBS: ESTE É APENAS UM RASCUNHO
 
+Pipeline analítico para detecção de anomalias em dados de trading cripto
+
+## Contexto do Problema
+A equipe de trading identificou slippage elevado em determinados pares cripto. Investigação inicial revelou:
+
+Preços desatualizados (stale) nos feeds de dados
+
+Valores zero em cotações ativas
+
+Ausência de métricas consolidadas de qualidade e risco
+
+## Solução Implementada
+Desenvolvi um pipeline de dados que processa feeds de mercado cripto em tempo real, validando qualidade e calculando scores de risco baseados em volatilidade e liquidez.
+Stack Técnica
+
+## Banco de Dados: MySQL com stored procedures e views materializadas
+Modelagem: Dimensional (Kimball) com granularidade horária
+
+Visualização: Power BI com atualização automática
+
+Orquestração: Preparado para Airflow/Cron
+
+## Arquitetura de Dados
+Camadas de Processamento
+Raw Layer
+
+raw_crypto: Ingestão bruta com flags de validação
+
+Campos de qualidade: is_valid, quality_flags, inserted_at
+
+Staging Layer
+
+fact_market_hourly_stg: Agregações horárias
+
+Métricas: pct_valid, pct_zero, pct_fresh
+
+## Presentation Layer
+
+fact_market_hourly: Fato limpo com chaves dimensionais
+
+vw_symbol_status: Status em tempo real (24h rolling)
+
+vw_risk_score: Score composto de risco
+
+## Modelo de Risk Score
+
+risk_score = (volatilidade_relativa * 0.6) + (risco_liquidez * 0.4)
+
+Onde:
+
+Volatilidade relativa: desvio padrão normalizado dos retornos
+
+Risco liquidez: inversamente proporcional ao volume médio diário
+
+## Resultados Observados
+
+Análise de 50+ pares cripto revelou:
+
+<img width="879" height="195" alt="image" src="https://github.com/user-attachments/assets/91c92f46-bb4b-437e-8620-763d7dbdb48b" />
+
+
+Projeção: Bloqueio dos 5 pares de maior risco reduziria exposição a slippage em aproximadamente 18%.
+
+## Dashboard Power BI
+
+Componentes principais:
+
+KPIs em tempo real: freshness, risk médio, alertas ativos
+
+Ranking dinâmico de pares por risco
+
+Série temporal de volatilidade e volume (7 dias)
+
+Filtros por ativo, período e threshold de risco
+
+---------------------------------------------------------------------
 populatedimtimelyhour: padronização do tempo (em até 6 meses no futuro) para garantir consistência temporal e confiabilidade dos resultados.
 
 <details>
