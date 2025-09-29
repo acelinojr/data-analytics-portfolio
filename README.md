@@ -1,6 +1,6 @@
 OBS: ESTE É APENAS UM RASCUNHO
 
-Pipeline analítico para detecção de anomalias em dados de trading cripto
+## Pipeline analítico para detecção de anomalias em dados de trading cripto
 
 ## Contexto do Problema
 A equipe de trading identificou slippage elevado em determinados pares cripto. Investigação inicial revelou:
