@@ -20,7 +20,7 @@ Modelagem: Dimensional (Kimball) com granularidade horária
 
 Visualização: Power BI com atualização automática
 
-Orquestração: Preparado para Airflow/Cron
+Orquestração: NiFi para procedures e scripts automatizados. Preparação para aplicar modelo de ML usando Airflow.
 
 ## Arquitetura de Dados
 Camadas de Processamento
