@@ -127,7 +127,7 @@ Observações:
 
 O evento garante execução horária autônoma do pipeline; logs devem ser consultados em etl_runs para auditoria de execuções e troubleshooting.
 
-Em ambientes de maior maturidade, substitua por Airflow (DAGs com operadores idempotentes, retries, alertas).
+Airflow será usado no futuro (DAGs com operadores idempotentes, retries, alertas).
 
 6. Métricas, Fórmulas e Regras de Negócio
 
@@ -141,7 +141,6 @@ Volume médio 24h (avg_volume_24h) = AVG(volume_24h_usd) em janela móvel 24h
 
 Risk Score (implementado) = CASE WHEN avg_volume_24h IS NULL OR avg_volume_24h = 0 THEN NULL ELSE vol_24h / avg_volume_24h END
 
-Nota: no rascunho você mencionou uma composição (volatilidade_relativa * 0.6) + (risco_liquidez * 0.4) — caso prefira essa versão, podemos ajustar sp_calc_risk_score() para normalizar e combinar essas componentes.
 
 7. Dashboards e Visualizações
 
@@ -151,7 +150,7 @@ Fontes: dm_quality_hourly, dm_risk_hourly, fact_market_hourly (via gateway MySQL
 
 Visualizações principais: KPIs (freshness, risk médio), ranking dinâmico, série temporal (7 dias), filtros por ativo/período/threshold
 
-Observação técnica: quando conectar hour_ts no Power BI, desabilite a hierarquia automática em campos de hora e prefira usar hour_id ou colunas já formatadas.
+Observação técnica: quando conectar hour_ts no Power BI, desabilite a hierarquia automática em campos de hora e use hour_id ou colunas já formatadas.
 
 Grafana
 
