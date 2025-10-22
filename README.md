@@ -1,6 +1,6 @@
 OBS: ESTE É APENAS UM RASCUNHO
 
-Pipeline Analítico de Trading Cripto — Documentação do Projeto
+Pipeline Analítico de Trading Cripto
 
 Resumo: Projeto para detecção de anomalias e controle de qualidade em feeds de mercado cripto. Implementação em MySQL (stored procedures, events), modelagem dimensional horária, orquestração via eventos MySQL (agendado) e visualização em Power BI e Grafana.
 
