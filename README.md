@@ -8,7 +8,7 @@ Resumo: Projeto para detecção de anomalias e controle de qualidade em feeds de
 
 Objetivo: reduzir exposição a slippage e aumentar confiança nas decisões de trading através de validações de qualidade de dados e um score de risco por ativo.
 
-Principais entregáveis:
+Implementações principais:
 
 Banco MySQL com camadas RAW → STAGING → WAREHOUSE → DATA MARTS
 
