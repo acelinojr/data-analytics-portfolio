@@ -1,6 +1,6 @@
 # Pipeline Analítico de Trading Cripto
 
-Sistema automatizado para detecção de anomalias e controle de qualidade em dados de mercado cripto, desenvolvido para reduzir exposição à slippage em operações de trading.
+Sistema automatizado para detecção de anomalias e controle de qualidade em dados de mercado cripto, desenvolvido para reduzir exposição à slippage em operações de trading, com dashboards no Grafana e Power BI para monitoramento e entrega de relatórios.
 
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?logo=mysql)](https://www.mysql.com/)
 [![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?logo=powerbi)](https://powerbi.microsoft.com/)
