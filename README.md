@@ -1,6 +1,6 @@
 # Pipeline Analítico de Trading Cripto
 
-Este projeto aplica técnicas de data science e data analytics em um sistema automatizado para detecção de anomalias e controle de qualidade em dados de mercado cripto. A solução reduz a exposição à slippage em operações de trading e oferece dashboards no Grafana e Power BI para monitoramento em tempo real e relatórios executivos.
+Este projeto aplica técnicas de Data Science e Analytics em um sistema automatizado para detecção de anomalias e controle de qualidade em dados de mercado cripto. A solução reduz a exposição à slippage em operações de trading e oferece dashboards no Grafana e Power BI para monitoramento em tempo real e relatórios executivos.
 
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?logo=mysql)](https://www.mysql.com/)
 [![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?logo=powerbi)](https://powerbi.microsoft.com/)
