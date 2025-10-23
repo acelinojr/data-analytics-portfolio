@@ -184,6 +184,22 @@ Análise de 50+ pares revelou:
 
 ---
 
+## Recomendações para os Stakeholders
+
+Com base nos resultados obtidos, recomenda-se que a equipe de trading e gestão de risco:
+
+1. Adote o monitoramento contínuo via dashboards (Grafana para operação em tempo real e Power BI para análises executivas), garantindo visibilidade imediata sobre qualidade e risco dos dados.
+
+2. Estabeleça políticas de bloqueio automático de ativos com baixa qualidade ou alto risco, reduzindo perdas por slippage e fortalecendo a governança de dados.
+
+3. Integre alertas proativos (Slack/Email) para que decisões críticas sejam tomadas rapidamente, sem depender de consultas manuais.
+
+4. Avalie a expansão do modelo para novos pares de ativos e mercados, aumentando a cobertura e a robustez do pipeline.
+
+5. Invista em evolução futura: migração para Airflow, uso de machine learning para detecção de anomalias e materialização de views para performance, conforme já previsto no roadmap.
+
+
+
 ## Principais Desafios Técnicos
 
 **1. Performance de Window Functions**  
