@@ -220,23 +220,6 @@ Solução: Tabela etl_runs com logs detalhados de cada execução
 
 ---
 
-## Como Executar
-
-```bash
-# 1. Setup banco
-mysql -u root -p < scripts/create_database.sql
-
-# 2. Popular dimensão tempo
-CALL populate_dim_time_hourly();
-
-# 3. Ativar automação
-SET GLOBAL event_scheduler = ON;
-
-# 4. Executar scraper
-python scraper/crypto_scraper.py --interval 300
-```
-
----
 
 ## Próximos Passos
 
